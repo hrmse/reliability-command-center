@@ -1,0 +1,1 @@
+{"alert":{"severity":"page","service":"checkout-api","namespace":"payments"},"evidence":[{"signal":"http_5xx_ratio","value":"0.07","source":"prometheus"},{"signal":"deployment_age_minutes","value":"10","source":"deployment-api"},{"signal":"public_exposure_change","value":"false","source":"terraform-plan"}]}

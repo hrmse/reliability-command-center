@@ -1,0 +1,18 @@
+{
+  "title": "Reliability Command Center",
+  "schemaVersion": 39,
+  "editable": true,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Highest decision risk",
+      "targets": [{"expr": "max(reliability_command_center_decision_risk)"}],
+      "fieldConfig": {"defaults": {"mappings": [{"type": "range", "options": {"from": 1, "to": 1, "result": {"text": "low"}}}, {"type": "range", "options": {"from": 2, "to": 2, "result": {"text": "medium"}}}, {"type": "range", "options": {"from": 3, "to": 3, "result": {"text": "high"}}}]}}
+    },
+    {
+      "type": "stat",
+      "title": "Approval required",
+      "targets": [{"expr": "max(reliability_command_center_approval_required)"}]
+    }
+  ]
+}

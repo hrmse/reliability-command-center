@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "reliability-command-center"
+version = "0.1.0"
+description = "Evidence-first, approval-gated SRE incident control plane"
+requires-python = ">=3.11"
+[tool.hatch.build.targets.wheel]
+packages = ["src/reliability_command_center"]
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+[tool.ruff]
+line-length = 100
+target-version = "py311"

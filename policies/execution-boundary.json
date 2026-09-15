@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "control_plane_permissions": ["read_incident_json", "write_decision_json", "write_prometheus_textfile"],
+  "prohibited_capabilities": ["shell_execution", "kubernetes_mutation", "cloud_mutation", "ticket_mutation", "secret_access"],
+  "approval": {
+    "required_for": ["destructive_change", "public_exposure_change"],
+    "external_verifier_must_check": ["authenticated_principal", "decision_id", "scope", "expiry", "least_privilege"]
+  }
+}
